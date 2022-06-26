@@ -1,0 +1,151 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  background-color: rgb(224, 224, 224);
+}
+div#Todo-container{
+  margin:70px auto;
+  background-color: aqua;
+  color:white;
+  font-size: 18px;
+  width:600px;
+  height:460px;
+  padding:15px 10px;
+  border-radius: 10px;
+}
+div#Todo-container h1{
+  text-align: center;
+  color:grey;
+  text-shadow:5px 0px 2px white;
+  font-style: italic;
+  animation: colorchange 3s ease-out 2s 5 alternate;
+}
+div#Todo-container h1:hover{
+  color:white;
+  text-shadow:5px 0px 2px grey;
+}
+@keyframes colorchange{
+  from{
+    color:grey;
+  text-shadow:5px 0px 2px white;
+  }
+  to{
+    color:white;
+  text-shadow:5px 0px 2px grey;
+  }
+}
+div#Todo-container p{
+  text-align: center;
+  margin:5px 0;
+  font-size: 15px;
+  color:green;
+}
+div#todo{
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+}
+div#todo input{
+  width:70%;
+  padding:5px 10px;
+  border-radius: 20px;
+  border:none;
+  font-size: 20px;
+  transition: all ease 0.4s;
+}
+div#todo input:focus{
+ outline:none;
+}
+div#todo input:focus{
+  /*border: 3px solid grey;*/
+  box-shadow:3px 3px 0 3px grey,-3px -3px 0 3px grey;
+}
+div#todo button{
+  background-color: transparent;
+  padding: 5px 10px;
+  border:2px solid black;
+  border-radius: 15px;
+  white-space: nowrap;
+}
+div#todo button:hover{
+  border-color:white;
+}
+div#todo button:active{
+  border-color:green;
+}
+div#todolist{
+  margin:10px auto;
+  height: 300px;
+  padding:15px;
+  box-shadow:3px 3px 3px grey;
+  border: 2px solid grey;
+  border-radius: 15px;
+  transition: all ease 0.4s;
+  overflow-y:auto;
+}
+div#todolist div#Event{
+  display:flex;
+  justify-content: space-between;
+  color:grey;
+  font-size:25px;
+  margin-bottom: 10px;
+  padding:10px;
+  border-radius:20px;
+  border: 1px solid white;
+}
+div#todolist div#Event p{
+  text-transform: capitalize;
+}
+div#todolist div#Event button#btn2{
+  background-color: transparent;
+  padding: 5px 10px;
+  border:2px solid black;
+  border-radius: 15px;
+  white-space: nowrap;  
+}
+div#todolist div#Event button#btn2:hover{
+  border-color:white;
+}
+div#todolist div#Event button#btn2:active{
+  border-color:red;
+}
+/*div#todolist*/
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb{
+  background: grey; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black; 
+}
+@media (375px> width >=1000px){
+  div#Todo-container{
+    margin: 70px auto;
+    height: 450px;
+    width:460px;
+  }
+}@media (max-width:375px){
+  div#Todo-container{
+    margin: 20px auto;
+    height: 500px;
+    width:300px;
+  }
+  div#todolist{
+    height: 350px;
+  }
+}
