@@ -21,21 +21,26 @@ const todo =  document.getElementById('todo')
    listEL.append(pEL,button)
    todoList.append(listEL)
    todoListContainer.append(todoList)
+    input.value=''
   }
+  /*
   else{
     todoListContainer.innerHTML= ''
     todoListContainer.append(title)
     todoListContainer.append(para)
     todoListContainer.append(todo);
     todoListContainer.append(todoList)
-       
   }
+  */
   // to delete an Event from the todolist
   const deleteBtns = document.querySelectorAll('#btn2')
 deleteBtns.forEach((deleteBtn)=>{
   deleteBtn.addEventListener('click', toDeleteEvent)
   function toDeleteEvent(){
     deleteBtn.parentNode.remove()
+   if(todoList.childNodes.length===0){
+      todoList.remove()      
+    }
   }
 })
 }
